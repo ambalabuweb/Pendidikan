@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bimbingan Konseling Online SMAN 2 Bantul</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #FF6347, #42a5f5); /* Gradien menarik */
+            color: #fff;
+            /* max-height: 100vh; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            /* overflow: hidden; */
+        }
+
+        .container {
+            background-color: #fff;
+            width: 100%;
+            max-width: 900px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            color: #333;
+            position: relative;
+
+            max-height: 100vh;
+            overflow-y: auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            color: #FF6347;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            color: #FF6347;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .content {
+            font-size: 1.2em;
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .goal-list {
+            list-style-type: none;
+            padding-left: 40px;
+        }
+
+        .goal-list li {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .goal-list li::before {
+            content: "✔";
+            color: #FF6347;
+            font-size: 1.5em;
+            margin-right: 15px;
+        }
+
+        .article {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .article h3 {
+            color: #FF6347;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .article a {
+            color: #FF6347;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .article a:hover {
+            color: #2575fc;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .next-btn, .back-btn {
+            background-color: #FF6347;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .next-btn:hover, .back-btn:hover {
+            background-color: #2575fc;
+            transform: scale(1.05);
+        }
+
+        /* Animasi fade-in */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Slide Transitions */
+        .slide {
+            display: none;
+            animation: slideIn 0.6s ease-out;
+        }
+
+        .active {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Desain responsif */
+        @media (max-width: 768px) {
+            body {
+                padding: 0 10px;
+            }
+
+            .container {
+                width: 100%;
+                padding: 20px;
+                overflow: auto;
+                max-height: 100%;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            .section-title {
+                font-size: 2.2em;
+            }
+
+            .next-btn, .back-btn {
+                font-size: 1em;
+                padding: 12px 20px;
+            }
+        }
+
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <img src="smadaba (1).png" alt="" style="width: 200px;">
+
+    <div class="container">
+        <!-- Halaman 1 - Sambutan -->
+        <div class="slide active" id="slide1">
+            <header>
+                <h1>Selamat Datang di Bimbingan Konseling Online SMAN 2 Bantul</h1>
+                <p>Platform yang dirancang untuk memberikan dukungan dan bimbingan bagi kesejahteraan mental Anda.</p>
+            </header>
+            
+            <div class="button-container">
+                <button class="next-btn" onclick="nextSlide(2)">Selanjutnya</button>
+            </div>
+        </div>
+
+        <!-- Halaman 2 - Deskripsi dan Tujuan -->
+        <div class="slide" id="slide2">
+            <header>
+                <h1>Deskripsi Bimbingan Konseling</h1>
+            </header>
+            
+            <section>
+                <h2 class="section-title">Tentang Bimbingan Konseling Online</h2>
+                <p class="content">Bimbingan Konseling Online SMAN 2 Bantul adalah layanan yang dirancang khusus untuk memberikan dukungan emosional, sosial, dan akademik bagi siswa. Melalui platform ini, siswa dapat berkonsultasi secara pribadi dengan konselor untuk mengatasi permasalahan yang mereka hadapi.</p>
+                <p>Tujuan dari layanan ini adalah untuk:</p>
+                <ul class="goal-list">
+                    <li>Menyediakan ruang aman bagi siswa untuk berbicara tentang masalah yang mereka hadapi tanpa rasa takut atau cemas.</li>
+                    <li>Memberikan solusi berupa bimbingan yang membantu siswa menemukan cara-cara mengatasi masalah yang mereka hadapi di sekolah, rumah, dan lingkungan sosial.</li>
+                    <li>Memperkuat mental dan emosional siswa untuk mencapai kesejahteraan pribadi dan akademik yang lebih baik.</li>
+                </ul>
+                <p>Melalui layanan ini, siswa dapat merasa lebih percaya diri dan mampu menghadapi tantangan di kehidupan mereka, baik itu dalam aspek pribadi maupun akademik.</p>
+            </section>
+
+            <div class="button-container">
+                <button class="back-btn" onclick="previousSlide(1)">Kembali</button>
+                <button class="next-btn" onclick="nextSlide(3)">Selanjutnya</button>
+            </div>
+        </div>
+
+        <!-- Halaman 3 - Manfaat dan Artikel -->
+        <div class="slide" id="slide3">
+            <header>
+                <h1>Manfaat Bimbingan Konseling</h1>
+            </header>
+            
+            <section>
+                <h2 class="section-title">Manfaat Layanan Konseling</h2>
+                <ul class="goal-list">
+                    <li>Membantu siswa mengembangkan keterampilan emosional yang sehat dalam menghadapi tekanan hidup.</li>
+                    <li>Mengurangi kecemasan dan meningkatkan keterampilan koping dalam menghadapi situasi sulit, seperti ujian atau konflik sosial.</li>
+                    <li>Menumbuhkan rasa percaya diri dan membantu siswa untuk lebih mengenal diri mereka sendiri.</li>
+                </ul>
+
+                <div class="article">
+                    <h3>Sumber Daya: Artikel Tentang Kesehatan Mental</h3>
+                    <p>Untuk informasi lebih lanjut mengenai pentingnya kesejahteraan mental, baca artikel terkait di <a href="https://www.mentalhealth.org" target="_blank">Mental Health Foundation</a></p>
+                </div>
+            </section>
+
+            <div class="button-container">
+                <button class="back-btn" onclick="previousSlide(2)">Kembali</button>
+                <button class="next-btn" onclick="nextSlide(4)">Selanjutnya</button>
+            </div>
+        </div>
+
+        <!-- Halaman 4 - Formulir Pendaftaran dan Penutup -->
+        <div class="slide" id="slide4">
+            <header>
+                <h1>Formulir Pendaftaran</h1>
+            </header>
+            
+            <section>
+                <p class="content">Silakan isi formulir berikut untuk mendaftar layanan bimbingan konseling online.</p>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSelUHLAEO2w8gE1h-PGAsQS-0nkxAl8oAg8JtmQorXfMC7kJw/viewform?embedded=true" width="640" height="1991" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
+            </section>
+
+            <div class="button-container">
+                <button class="back-btn" onclick="previousSlide(3)">Kembali</button>
+                <button class="next-btn" onclick="alert('Terima kasih telah mendaftar!')">Terima Kasih</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 4;
+
+        function showSlide(slideIndex) {
+            for (let i = 1; i <= totalSlides; i++) {
+                document.getElementById('slide' + i).classList.remove('active');
+            }
+            document.getElementById('slide' + slideIndex).classList.add('active');
+        }
+
+        function nextSlide(slideIndex) {
+            currentSlide = slideIndex;
+            showSlide(currentSlide);
+        }
+
+        function previousSlide(slideIndex) {
+            currentSlide = slideIndex;
+            showSlide(currentSlide);
+        }
+
+        // Initial display
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>
+ 
