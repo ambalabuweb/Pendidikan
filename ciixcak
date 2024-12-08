@@ -200,7 +200,7 @@
         <!-- Halaman 1 - Sambutan -->
         <div class="slide active" id="slide1">
             <header>
-                <h1>Selamat Datang di Bimbingan Konseling Online SMAN 2 Bantul</h1>
+                <h1>Yuk Buat Janji Temu Sekarang!</h1>
                 <p>Platform yang dirancang untuk memberikan dukungan dan bimbingan bagi kesejahteraan mental Anda.</p>
             </header>
             
@@ -249,7 +249,7 @@
 
                 <div class="article">
                     <h3>Sumber Daya: Artikel Tentang Kesehatan Mental</h3>
-                    <p>Untuk informasi lebih lanjut mengenai pentingnya kesejahteraan mental, baca artikel terkait di <a href="https://www.mentalhealth.org" target="_blank">Mental Health Foundation</a></p>
+                    <p>Untuk informasi lebih lanjut mengenai pentingnya kesejahteraan mental, baca artikel terkait di <a href="https://www.halodoc.com/artikel/ini-pentingnya-menjaga-kesehatan-mental-remaja" target="_blank">Mental Health Foundation</a></p>
                 </div>
             </section>
 
